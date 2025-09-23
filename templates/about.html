@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-<link rel="stylesheet" href="../static/css/about.css"/>
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class="about-container">
     <h2>About Recipe Hub</h2>

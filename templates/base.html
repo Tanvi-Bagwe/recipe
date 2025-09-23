@@ -13,15 +13,18 @@
 
     <title>RECIPE HUB</title>
 
-    <link rel="stylesheet" href="../static/css/style.css"/>
-    <link rel="stylesheet" href="../static/css/header.css"/>
-    <link rel="stylesheet" href="../static/css/footer.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+
+    {% block extra_css %}{% endblock %}
+
 </head>
 
 <body>
 <header class="custom-header">
     <div class="logo">
-                <a href="#home"><img src="../static/images/chef.png" alt="Rentozy Logo"/></a>
+        <a href="#home"><img src="../static/images/chef.png" alt="Rentozy Logo"/></a>
     </div>
     <button class="menu-toggle" onclick="showAndHideMenu()" aria-label="Toggle navigation">
         &#9776;
