@@ -1,6 +1,11 @@
-from flask import Flask, render_template, request
-app = Flask(__name__)
+from flask import Flask, render_template, request, jsonify
+from api import api_bp
+from flasgger import Swagger
 
+app = Flask(__name__)
+swagger = Swagger(app)
+
+app.register_blueprint(api_bp)
 
 @app.route("/")
 def home():
@@ -9,6 +14,11 @@ def home():
 @app.route("/about-us")
 def about():
     return render_template("about.html")
+
+@app.route('/ping', methods=['GET'])
+def ping():
+
+    return jsonify(message="pong")
 
 if __name__ == "__main__":
     app.run(debug=True)

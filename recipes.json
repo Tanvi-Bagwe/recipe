@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Pancakes",
+        "short": "Fluffy breakfast pancakes",
+        "ingredients": ["Flour", "Milk", "Eggs", "Sugar", "Baking Powder", "Butter"],
+        "steps": [
+            "Mix dry ingredients.",
+            "Add wet ingredients and whisk until smooth.",
+            "Cook on a heated pan until golden."
+        ],
+        "time": "20 mins",
+        "difficulty": "Easy",
+        "image": "pancake.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Spaghetti Bolognese",
+        "short": "Classic Italian meat sauce",
+        "ingredients": ["Spaghetti", "Minced beef", "Tomato", "Onion", "Garlic", "Olive oil"],
+        "steps": [
+            "Cook spaghetti.",
+            "Prepare sauce with beef and tomatoes.",
+            "Serve over pasta."
+        ],
+        "time": "40 mins",
+        "difficulty": "Medium",
+        "image": "spaghetti.jpg"
+    }
+]
