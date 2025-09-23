@@ -1,25 +1,44 @@
 {% extends "base.html" %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 {% endblock %}
 
 {% block content %}
-<div class="about-container">
-    <h2>About Recipe Hub</h2>
-    <p>
-        Welcome to <b>Recipe Hub</b> — your go-to place for discovering and sharing delicious recipes.
-        Whether you’re a beginner in the kitchen or an experienced chef, Recipe Hub provides
-        easy-to-follow instructions, fresh ideas, and inspiration for every meal of the day.
-    </p>
-    <p>
-        Our mission is simple: bring people together through food. From traditional dishes to
-        modern favorites, we believe that cooking is more than just preparing meals —
-        it’s about creating memories and connecting with loved ones.
-    </p>
-    <p>
-        Browse our collection, try out new recipes, and don’t forget to share your own culinary creations.
-        Together, let’s make cooking fun, creative, and enjoyable for everyone!
-    </p>
-</div>
+    <div class="about-container">
+        <h2>About Recipe Hub</h2>
+        <p>
+            Welcome to <b>Recipe Hub</b> — your go-to place for discovering and sharing delicious recipes.
+            Whether you’re a beginner in the kitchen or an experienced chef, Recipe Hub provides
+            easy-to-follow instructions, fresh ideas, and inspiration for every meal of the day.
+        </p>
+        <p>
+            Our mission is simple: bring people together through food. From traditional dishes to
+            modern favorites, we believe that cooking is more than just preparing meals —
+            it’s about creating memories and connecting with loved ones.
+        </p>
+        <p>
+            Browse our collection, try out new recipes, and don’t forget to share your own culinary creations.
+            Together, let’s make cooking fun, creative, and enjoyable for everyone!
+        </p>
+    </div>
+
+    <div class="our-goal">
+        <h2>Our Goal</h2>
+        <p>
+            At <b>Recipe Hub</b>, our goal is to inspire creativity in every kitchen.
+            We believe cooking should be simple, enjoyable, and accessible to everyone — whether
+            you’re preparing a quick meal after work or hosting a special dinner for friends and family.
+        </p>
+        <p>
+            By curating a wide variety of recipes, from traditional comfort foods to modern favorites,
+            we aim to make cooking a rewarding experience. Our recipes are designed to be easy to follow,
+            while still leaving room for you to add your own personal touch.
+        </p>
+        <p>
+            Ultimately, our mission is to create a community where food lovers can share, learn, and grow together —
+            one recipe at a time.
+        </p>
+    </div>
+
 {% endblock %}
