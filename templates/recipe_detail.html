@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ recipe.name }} - Recipe Hub{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe-detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="recipe-detail">
+    <h2>{{ recipe.name }}</h2>
+    <img src="{{ url_for('static', filename='images/recipes/' + recipe.image) }}" alt="{{ recipe.name }}">
+
+    <p><b>Time:</b> {{ recipe.time }}</p>
+    <p><b>Difficulty:</b> {{ recipe.difficulty }}</p>
+
+    <h3>Ingredients</h3>
+    <ul>
+        {% for item in recipe.ingredients %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Steps</h3>
+    <ol>
+        {% for step in recipe.steps %}
+        <li>{{ step }}</li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}
