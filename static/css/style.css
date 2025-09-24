@@ -12,3 +12,8 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+.not-found {
+    text-align: center;
+    padding: 50px;
+}

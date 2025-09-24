@@ -25,7 +25,7 @@ def recipes_page():
 
 
 # Detail page
-@app.route("/recipie/<int:recipe_id>/")
+@app.route("/recipe/<int:recipe_id>")
 def recipe_detail(recipe_id):
     recipes = load_recipes()
     recipe = None
@@ -37,7 +37,7 @@ def recipe_detail(recipe_id):
             break
 
     if recipe is None:
-        return "Recipe not found", 404
+        return render_template("not_found.html")
 
     return render_template("recipe_detail.html", recipe=recipe)
 
