@@ -161,7 +161,7 @@
     ],
     "time": "40 mins",
     "difficulty": "Medium",
-    "image": "paneer_tikka.jpg"
+    "image": "paneer_tikka.png"
   },
   {
     "id": 7,
@@ -188,7 +188,7 @@
     ],
     "time": "30 mins",
     "difficulty": "Easy",
-    "image": "rava_idli.jpg"
+    "image": "rava_idli.png"
   },
   {
     "id": 8,
@@ -215,7 +215,7 @@
     ],
     "time": "35 mins",
     "difficulty": "Medium",
-    "image": "baingan_bharta.jpg"
+    "image": "baingan_bharta.png"
   },
   {
     "id": 9,
@@ -243,7 +243,7 @@
     ],
     "time": "30 mins",
     "difficulty": "Easy",
-    "image": "dhokla.jpg"
+    "image": "dhokla.png"
   },
   {
     "id": 10,
@@ -271,7 +271,7 @@
     ],
     "time": "40 mins",
     "difficulty": "Medium",
-    "image": "fish_curry.jpg"
+    "image": "fish_curry.png"
   },
   {
     "id": 11,
@@ -298,7 +298,7 @@
     ],
     "time": "25 mins",
     "difficulty": "Easy",
-    "image": "rasam.jpg"
+    "image": "rasam.png"
   },
   {
     "id": 12,
@@ -326,7 +326,7 @@
     ],
     "time": "40 mins",
     "difficulty": "Medium",
-    "image": "pav_bhaji.jpg"
+    "image": "pav_bhaji.png"
   },
   {
     "id": 13,
@@ -351,7 +351,7 @@
     ],
     "time": "30 mins",
     "difficulty": "Easy",
-    "image": "methi_thepla.jpg"
+    "image": "methi_thepla.png"
   },
   {
     "id": 14,
@@ -377,6 +377,6 @@
     ],
     "time": "45 mins",
     "difficulty": "Medium",
-    "image": "chicken_65.jpg"
+    "image": "chicken_65.png"
   }
 ]
