@@ -6,13 +6,17 @@
 
 {% block content %}
 
-<h2 class="page-title">Explore Recipes</h2>
-<div class="recipe-grid">
-    {% for recipe in recipes %}
-    <div class="recipe-card">
-        <img src="{{ url_for('static', filename='images/recipes/' + recipe.image) }}" alt="{{ recipe.name }}">
-        <h3>{{ recipe.name }}</h3>
+    <h2 class="page-title">Explore Recipes</h2>
+    <div class="recipe-grid">
+        {% for recipe in recipes %}
+            <div class="recipe-card">
+                <a href="{{ url_for('recipe_detail', recipe_id=recipe.id) }}" class="recipe-card">
+
+                    <img src="{{ url_for('static', filename='images/recipes/' + recipe.image) }}"
+                         alt="{{ recipe.name }}">
+                    <h3>{{ recipe.name }}</h3>
+                </a>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 {% endblock %}
