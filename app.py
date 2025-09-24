@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from api import api_bp
+from api import api_bp, load_recipes
 from flasgger import Swagger
 
 app = Flask(__name__)
@@ -15,10 +15,10 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route('/ping', methods=['GET'])
-def ping():
-
-    return jsonify(message="pong")
+@app.route("/recipes")
+def recipes_page():
+    recipes = load_recipes()
+    return render_template("recipies.html", recipes=recipes)
 
 if __name__ == "__main__":
     app.run(debug=True)
