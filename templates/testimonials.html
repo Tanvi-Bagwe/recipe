@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonials.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="page-container">
+        <h2>What People Say About Recipe Hub</h2>
+        <p>Read testimonials from our happy food lovers and share your own!</p>
+
+        <form id="testimonialForm">
+            <label for="name">Name :</label>
+            <input type="text" id="name" placeholder="Your Name"><br><br>
+            <label for="feedback">Feedback :</label>
+            <textarea id="feedback" placeholder="Write your testimonial..."></textarea><br><br>
+            <span id="errorMessage" class="error-message"></span>
+            <button type="button" onclick="submitTestimonial()">Submit Testimonial</button>
+        </form>
+
+
+    </div>
+
+    <div class="testimonial-section">
+        <h3>User Testimonials</h3>
+        <div id="testimonialList" class="testimonials-container"></div>
+    </div>
+
+{% endblock %}
+{% block extra_js %}
+    <script src="{{ url_for('static', filename='js/testimonials.js') }}"></script>
+{% endblock %}
