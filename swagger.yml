@@ -1,0 +1,37 @@
+swagger: "2.0"
+info:
+  title: Recipe Hubs API
+  version: "1.0"
+paths:
+  /testimonial/add/:
+    post:
+      summary: Add a new testimonial
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              feedback:
+                type: string
+            required:
+              - name
+              - feedback
+      responses:
+        201:
+          description: Testimonial added successfully
+        400:
+          description: Missing name or feedback
+  /testimonial/all/:
+    get:
+      summary: Get all testimonials
+      consumes:
+        - application/json
+      responses:
+        200:
+          description: Testimonial retrieved successfully
