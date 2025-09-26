@@ -5,7 +5,7 @@ api_bp = Blueprint('api', __name__)
 
 def load_recipes():
     """Read recipes from JSON file"""
-    with open('recipes.json', 'r') as f:
+    with open('data/recipes.json', 'r') as f:
         return json.load(f)
 
 

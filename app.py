@@ -1,14 +1,36 @@
-from flask import Flask, render_template, request, jsonify
-from api import api_bp, load_recipes
+import json
+import os
+
 from flasgger import Swagger
+from flask import Flask, render_template, request, jsonify, redirect, url_for
+
+from api import load_recipes
 
 app = Flask(__name__)
 swagger = Swagger(app, template_file='swagger.yml')
 
-testimonials = []
+DATA_FILE = "data/testimonials.json"
+
+
+# Helper functions to read/write JSON
+def load_testimonials():
+    if not os.path.exists(DATA_FILE):
+        return []
+    with open(DATA_FILE, "r") as f:
+        return json.load(f)
+
+
+def save_testimonials(testimonials):
+    with open(DATA_FILE, "w") as f:
+        json.dump(testimonials, f, indent=4)
 
 
 @app.route("/")
+def default_route():
+    return redirect(url_for('home'))
+
+
+@app.route("/home")
 def home():
     return render_template("home.html")
 
@@ -56,14 +78,17 @@ def add_testimonial():
     if not name or not feedback:
         return jsonify({"error": "Name and feedback are required"}), 400
 
+    testimonials = load_testimonials()
     testimonial = {"name": name, "feedback": feedback}
     testimonials.append(testimonial)
+    save_testimonials(testimonials)
 
     return jsonify({"message": "Testimonial added successfully", "testimonial": testimonial}), 201
 
 
 @app.route("/testimonial/all/", methods=["GET"])
 def get_all_testimonials():
+    testimonials = load_testimonials()
     return jsonify(testimonials), 200
 
 

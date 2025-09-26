@@ -24,7 +24,7 @@
 <body>
 <header class="custom-header">
     <div class="logo">
-        <a href="#home"><img src="../static/images/logo.png" alt="Recipe Logo"/></a>
+        <a href="/home"><img src="../static/images/logo.png" alt="Recipe Logo"/></a>
     </div>
     <button class="menu-toggle" onclick="showAndHideMenu()" aria-label="Toggle navigation">
         &#9776;
@@ -32,13 +32,16 @@
     <nav class="nav">
         <ul class="nav-links" id="navLinks">
             <li>
-                <button onclick="navigateTo('Home')">Home</button>
+                <button ><a href="/home">Home</a></button>
             </li>
             <li>
-                <button><a href="recipes">Recipes</a></button>
+                <button><a href="/recipes">Recipes</a></button>
             </li>
             <li>
-                <button><a href="about-us">About</a></button>
+                <button><a href="/about-us">About</a></button>
+            </li>
+            <li>
+                <button><a href="/testimonials">Testimonials</a></button>
             </li>
         </ul>
     </nav>
@@ -79,6 +82,7 @@
 </footer>
 
 <script src="../static/js/main.js"></script>
+{% block extra_js %}{% endblock %}
 </body>
 
 </html>

@@ -1,5 +1,53 @@
 {% extends "base.html" %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
 {% block content %}
-    <h2>Welcome</h2>
-    <p>Discover delicious recipes and cooking inspiration.</p>
+    <div class="hero">
+        <h1>Welcome to Recipe Hub</h1>
+        <p>Your one-stop place for delicious recipes and cooking inspiration.</p>
+        <a href="{{ url_for('recipes_page') }}" class="btn">Explore Recipes</a>
+    </div>
+
+    <div class="intro">
+        <h2>Why Recipe Hub?</h2>
+        <p>
+            We believe that cooking should be fun, easy, and full of flavor.
+            Explore hundreds of curated recipes, get inspired, and bring joy to your kitchen every day.
+        </p>
+    </div>
+
+    <div class="featured">
+        <h2>Featured Recipes</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <a href='/recipe/1' class="recipe-card">
+                    <img src="{{ url_for('static', filename='images/recipes/butter_chicken.png') }}"
+                         alt="Butter Chicken">
+                    <h3>Butter Chicken</h3>
+                </a>
+            </div>
+            <div class="featured-card">
+                <a href='/recipe/9' class="recipe-card">
+                <img src="{{ url_for('static', filename='images/recipes/dhokla.png') }}" alt="Dhokla">
+                <h3>Dhokla</h3>
+                </a>
+            </div>
+            <div class="featured-card">
+                <a href='/recipe/12' class="recipe-card">
+                <img src="{{ url_for('static', filename='images/recipes/pav_bhaji.png') }}" alt="Pav Bhaji">
+                <h3>Pav Bhaji</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="community-container">
+        <h2>Join Our Community</h2>
+        <p>Have a recipe to share or feedback for us?</p>
+        <br/>
+        <a href="{{ url_for('testimonials_page') }}" class="btn">Share a Testimonial</a>
+    </div>
 {% endblock %}
