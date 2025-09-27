@@ -19,7 +19,7 @@ def job():
 
 
 # schedule job every 5 minutes
-schedule.every(5).seconds.do(job)
+schedule.every(5).minutes.do(job)
 
 
 def run_scheduler():
