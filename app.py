@@ -4,10 +4,13 @@ import os
 from flasgger import Swagger
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 
+from keep_alive import start_scheduler
+
 app = Flask(__name__)
 swagger = Swagger(app, template_file='swagger.yml')
 
 DATA_FILE = "data/testimonials.json"
+
 
 def load_recipes():
     """Read recipes from JSON file"""
@@ -54,6 +57,12 @@ def testimonials_page():
     return render_template("testimonials.html")
 
 
+@app.route("/testimonial/all/", methods=["GET"])
+def get_all_testimonials():
+    testimonials = load_testimonials()
+    return jsonify(testimonials), 200
+
+
 # Detail page
 @app.route("/recipe/<int:recipe_id>")
 def recipe_detail(recipe_id):
@@ -89,11 +98,6 @@ def add_testimonial():
     return jsonify({"message": "Testimonial added successfully", "testimonial": testimonial}), 201
 
 
-@app.route("/testimonial/all/", methods=["GET"])
-def get_all_testimonials():
-    testimonials = load_testimonials()
-    return jsonify(testimonials), 200
-
-
 if __name__ == "__main__":
+    start_scheduler()
     app.run(debug=True)
