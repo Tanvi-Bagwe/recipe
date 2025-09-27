@@ -1,18 +1,13 @@
-version: "1"
-projects:
-- name: RECIPE-HUB
-  environments:
-  - name: Production
-    services:
-    - type: web
-      name: recipe-hub
-      runtime: python
-      repo: https://github.com/Tanvi-Bagwe/recipe
-      plan: free
-      region: oregon
-      buildCommand: pip install -r requirements.txt
-      startCommand: gunicorn app:app
-      domains:
+services:
+  - type: web
+    name: recipe-hub
+    runtime: python
+    repo: https://github.com/Tanvi-Bagwe/recipe
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    domains:
       - recipehub.pro
       - www.recipehub.pro
-      autoDeployTrigger: commit
+    autoDeploy: true
