@@ -1,0 +1,132 @@
+[2025-09-27 12:17:14,549] WARNING in _internal:  * Debugger is active!
+[2025-09-27 12:17:14,551] INFO in _internal:  * Debugger PIN: 293-505-321
+[2025-09-27 12:17:18,843] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-09-27 12:17:18,844] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-09-27 12:17:18,845] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:17:19,374] WARNING in _internal:  * Debugger is active!
+[2025-09-27 12:17:19,376] INFO in _internal:  * Debugger PIN: 293-505-321
+[2025-09-27 12:17:29,111] INFO in app: Server started
+[2025-09-27 12:17:29,125] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "GET /recipes HTTP/1.1" 200 -
+[2025-09-27 12:17:29,379] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,383] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/butter_chicken.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,409] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/css/recipes-grid.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,412] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,416] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/chole.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,417] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,418] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,421] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/css/header.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,432] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/samosa.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,434] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/biryani.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,443] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/kheer.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,448] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/paneer_tikka.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,452] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/rava_idli.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,455] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/baingan_bharta.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,462] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/methi_thepla.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,465] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/rasam.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,467] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/dhokla.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,469] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/fish_curry.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,476] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/chicken_65.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,478] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/recipes/pav_bhaji.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,485] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/icons/whatsapp.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,487] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/icons/instagram.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,488] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/icons/mail.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,494] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/icons/phone-call.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:17:29,645] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:17:29] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:18:46,568] INFO in _internal:  * Detected change in 'D:\\Tanvi\\python-assignment\\recipe\\app.py', reloading
+[2025-09-27 12:18:46,645] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:18:53,587] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:18:59,453] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:19:01,815] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-09-27 12:19:01,815] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-09-27 12:19:01,817] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:19:02,467] WARNING in _internal:  * Debugger is active!
+[2025-09-27 12:19:02,470] INFO in _internal:  * Debugger PIN: 293-505-321
+[2025-09-27 12:19:04,207] INFO in app: Server started
+[2025-09-27 12:19:04,221] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "GET /recipes HTTP/1.1" 200 -
+[2025-09-27 12:19:04,479] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,483] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/butter_chicken.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,497] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/css/header.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,503] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,508] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/chole.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,509] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,514] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/samosa.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,515] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,517] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/css/recipes-grid.css HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,524] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/biryani.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,534] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/kheer.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,540] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/paneer_tikka.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,546] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/rava_idli.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,552] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/rasam.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,559] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/pav_bhaji.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,563] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/baingan_bharta.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,574] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/chicken_65.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,576] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/dhokla.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,580] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/fish_curry.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,586] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/recipes/methi_thepla.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,609] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/icons/whatsapp.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,610] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/icons/instagram.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,614] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/icons/mail.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,619] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/icons/phone-call.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:19:04,727] INFO in _internal: 127.0.0.1 - - [27/Sep/2025 12:19:04] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+[2025-09-27 12:20:12,489] INFO in _internal:  * Detected change in 'D:\\Tanvi\\python-assignment\\recipe\\keep_alive.py', reloading
+[2025-09-27 12:20:12,598] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:20:13,180] WARNING in _internal:  * Debugger is active!
+[2025-09-27 12:20:13,182] INFO in _internal:  * Debugger PIN: 293-505-321
+[2025-09-27 12:22:04,696] INFO in _internal:  * Detected change in 'D:\\Tanvi\\python-assignment\\recipe\\keep_alive.py', reloading
+[2025-09-27 12:22:04,768] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:24:16,143] INFO in keep_alive: Starting scheduler...
+[2025-09-27 12:24:21,173] INFO in keep_alive: [2025-09-27 12:24:21] Pinging self to stay awake...
+[2025-09-27 12:24:22,083] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:22,083] INFO in keep_alive: [2025-09-27 12:24:22] Pinged self to stay awake
+[2025-09-27 12:24:27,128] INFO in keep_alive: [2025-09-27 12:24:27] Pinging self to stay awake...
+[2025-09-27 12:24:27,633] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:27,634] INFO in keep_alive: [2025-09-27 12:24:27] Pinged self to stay awake
+[2025-09-27 12:24:32,706] INFO in keep_alive: [2025-09-27 12:24:32] Pinging self to stay awake...
+[2025-09-27 12:24:33,196] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:33,196] INFO in keep_alive: [2025-09-27 12:24:33] Pinged self to stay awake
+[2025-09-27 12:24:38,245] INFO in keep_alive: [2025-09-27 12:24:38] Pinging self to stay awake...
+[2025-09-27 12:24:39,003] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:39,004] INFO in keep_alive: [2025-09-27 12:24:39] Pinged self to stay awake
+[2025-09-27 12:24:44,035] INFO in keep_alive: [2025-09-27 12:24:44] Pinging self to stay awake...
+[2025-09-27 12:24:44,511] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:44,512] INFO in keep_alive: [2025-09-27 12:24:44] Pinged self to stay awake
+[2025-09-27 12:24:49,552] INFO in keep_alive: [2025-09-27 12:24:49] Pinging self to stay awake...
+[2025-09-27 12:24:50,338] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:50,338] INFO in keep_alive: [2025-09-27 12:24:50] Pinged self to stay awake
+[2025-09-27 12:24:55,402] INFO in keep_alive: [2025-09-27 12:24:55] Pinging self to stay awake...
+[2025-09-27 12:24:55,920] INFO in keep_alive: Response: 200
+[2025-09-27 12:24:55,921] INFO in keep_alive: [2025-09-27 12:24:55] Pinged self to stay awake
+[2025-09-27 12:25:00,971] INFO in keep_alive: [2025-09-27 12:25:00] Pinging self to stay awake...
+[2025-09-27 12:25:01,427] INFO in keep_alive: Response: 200
+[2025-09-27 12:25:01,427] INFO in keep_alive: [2025-09-27 12:25:01] Pinged self to stay awake
+[2025-09-27 12:25:11,805] INFO in scheduler: Starting scheduler...
+[2025-09-27 12:25:16,845] INFO in scheduler: [2025-09-27 12:25:16] Pinging self to stay awake...
+[2025-09-27 12:25:17,283] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-09-27 12:25:17,284] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-09-27 12:25:17,284] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:25:17,324] INFO in scheduler: Response: 200
+[2025-09-27 12:25:17,324] INFO in scheduler: [2025-09-27 12:25:17] Pinged self to stay awake
+[2025-09-27 12:25:17,723] WARNING in _internal:  * Debugger is active!
+[2025-09-27 12:25:17,726] INFO in _internal:  * Debugger PIN: 293-505-321
+[2025-09-27 12:25:22,366] INFO in scheduler: [2025-09-27 12:25:22] Pinging self to stay awake...
+[2025-09-27 12:25:22,908] INFO in scheduler: Response: 200
+[2025-09-27 12:25:22,909] INFO in scheduler: [2025-09-27 12:25:22] Pinged self to stay awake
+[2025-09-27 12:25:27,953] INFO in scheduler: [2025-09-27 12:25:27] Pinging self to stay awake...
+[2025-09-27 12:25:28,717] INFO in scheduler: Response: 200
+[2025-09-27 12:25:28,717] INFO in scheduler: [2025-09-27 12:25:28] Pinged self to stay awake
+[2025-09-27 12:25:33,754] INFO in scheduler: [2025-09-27 12:25:33] Pinging self to stay awake...
+[2025-09-27 12:25:33,927] INFO in _internal:  * Detected change in 'D:\\Tanvi\\python-assignment\\recipe\\logger.py', reloading
+[2025-09-27 12:25:33,996] INFO in _internal:  * Restarting with stat
+[2025-09-27 12:25:34,199] INFO in scheduler: Response: 200
+[2025-09-27 12:25:34,200] INFO in scheduler: [2025-09-27 12:25:34] Pinged self to stay awake
+[2025-09-27 12:25:34,490] WARNING in _internal:  * Debugger is active!
+[2025-09-27 12:25:34,492] INFO in _internal:  * Debugger PIN: 293-505-321
+[2025-09-27 12:25:39,234] INFO in scheduler: [2025-09-27 12:25:39] Pinging self to stay awake...
+[2025-09-27 12:25:40,000] INFO in scheduler: Response: 200
+[2025-09-27 12:25:40,000] INFO in scheduler: [2025-09-27 12:25:40] Pinged self to stay awake
+[2025-09-27 12:25:45,044] INFO in scheduler: [2025-09-27 12:25:45] Pinging self to stay awake...
+[2025-09-27 12:25:45,491] INFO in scheduler: Response: 200
+[2025-09-27 12:25:45,492] INFO in scheduler: [2025-09-27 12:25:45] Pinged self to stay awake
