@@ -43,6 +43,12 @@ def save_testimonials(testimonials):
         json.dump(testimonials, f, indent=4)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    """Redirect to a custom 404 page."""
+    return render_template('not_found.html'), 404
+
+
 @app.route("/")
 def default_route():
     """Redirect root path to the home page.
