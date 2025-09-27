@@ -4,7 +4,7 @@ import os
 from flasgger import Swagger
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 
-from keep_alive import start_scheduler
+from logger import logger
 
 app = Flask(__name__)
 swagger = Swagger(app, template_file='swagger.yml')
@@ -48,6 +48,7 @@ def about():
 
 @app.route("/recipes")
 def recipes_page():
+    logger.info("Server started")
     recipes = load_recipes()
     return render_template("recipies.html", recipes=recipes)
 
@@ -99,5 +100,4 @@ def add_testimonial():
 
 
 if __name__ == "__main__":
-    start_scheduler()
     app.run(debug=True)
