@@ -32,7 +32,7 @@ def job():
         logger.error(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Ping failed: {e}")
 
 
-schedule.every(5).seconds.do(job)
+schedule.every(5).minutes.do(job)
 
 
 def run_scheduler():
