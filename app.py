@@ -4,12 +4,15 @@ import os
 from flasgger import Swagger
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 
-from api import load_recipes
-
 app = Flask(__name__)
 swagger = Swagger(app, template_file='swagger.yml')
 
 DATA_FILE = "data/testimonials.json"
+
+def load_recipes():
+    """Read recipes from JSON file"""
+    with open('data/recipes.json', 'r') as f:
+        return json.load(f)
 
 
 # Helper functions to read/write JSON
