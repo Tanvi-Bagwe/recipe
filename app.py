@@ -18,7 +18,6 @@ def load_recipes():
         return json.load(f)
 
 
-# Helper functions to read/write JSON
 def load_testimonials():
     if not os.path.exists(DATA_FILE):
         return []
@@ -48,9 +47,10 @@ def about():
 
 from flask import request
 
+
 @app.route("/recipes")
 def recipes_page():
-    recipe_type = request.args.get("type", "all")  # veg, non-veg, all
+    recipe_type = request.args.get("type", "all")
     all_recipes = load_recipes()
     filtered_recipes = []
 
@@ -63,10 +63,9 @@ def recipes_page():
             if not r.get("is_veg"):
                 filtered_recipes.append(r)
     else:
-        filtered_recipes = all_recipes  # default: all
+        filtered_recipes = all_recipes
 
     return render_template("recipies.html", recipes=filtered_recipes, selected=recipe_type)
-
 
 
 @app.route("/testimonials")
@@ -80,13 +79,11 @@ def get_all_testimonials():
     return jsonify(testimonials), 200
 
 
-# Detail page
 @app.route("/recipe/<int:recipe_id>")
 def recipe_detail(recipe_id):
     recipes = load_recipes()
     recipe = None
 
-    # Simple loop to find the recipe by ID
     for r in recipes:
         if r["id"] == recipe_id:
             recipe = r

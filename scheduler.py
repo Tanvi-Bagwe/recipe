@@ -8,7 +8,7 @@ from logger import logger
 def job():
     try:
         logger.info(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Pinging self to stay awake...")
-        
+
         response = requests.get("https://www.recipehub.pro")
         if response.status_code != 200:
             response = requests.get("https://recipe-92ry.onrender.com")
@@ -18,7 +18,6 @@ def job():
         logger.error(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Ping failed: {e}")
 
 
-# schedule job every 5 minutes
 schedule.every(5).minutes.do(job)
 
 
