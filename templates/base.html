@@ -24,7 +24,8 @@
 <body>
 <header class="custom-header">
     <div class="logo">
-        <a href="/home"><img src="../static/images/logo.png" alt="Recipe Logo"/></a>
+        <a href="{{ url_for('home') }}" aria-label="Home"><img src="{{ url_for('static', filename='images/logo.png') }}"
+                                                               alt="Recipe Logo"/></a>
     </div>
     <button class="menu-toggle" onclick="showAndHideMenu()" aria-label="Toggle navigation">
         &#9776;
@@ -32,16 +33,16 @@
     <nav class="nav">
         <ul class="nav-links" id="navLinks">
             <li>
-                <button ><a href="/home">Home</a></button>
+                <button><a href="{{ url_for('home') }}">Home</a></button>
             </li>
             <li>
-                <button><a href="/recipes">Recipes</a></button>
+                <button><a href="{{ url_for('recipes_page') }}">Recipes</a></button>
             </li>
             <li>
-                <button><a href="/about-us">About</a></button>
+                <button><a href="{{ url_for('about') }}">About</a></button>
             </li>
             <li>
-                <button><a href="/testimonials">Testimonials</a></button>
+                <button><a href="{{ url_for('testimonials_page') }}">Testimonials</a></button>
             </li>
         </ul>
     </nav>
@@ -62,16 +63,16 @@
         <div class="footer-links">
             <h4>Connect with us</h4>
             <a href="https://wa.me/1234567890" target="_blank">
-                <img src="../static/images/icons/whatsapp.png" alt="WhatsApp"> WhatsApp
+                <img src="{{ url_for('static', filename='images/icons/whatsapp.png') }}" alt="WhatsApp"> WhatsApp
             </a>
             <a href="https://instagram.com/" target="_blank">
-                <img src="../static/images/icons/instagram.png" alt="Instagram"> Instagram
+                <img src="{{ url_for('static', filename='images/icons/instagram.png') }}" alt="Instagram"> Instagram
             </a>
             <a href="mailto:tanvibagwe97@gmail.com">
-                <img src="../static/images/icons/mail.png" alt="Email"> Email
+                <img src="{{ url_for('static', filename='images/icons/mail.png') }}" alt="Email"> Email
             </a>
             <a href="tel:+1234567890">
-                <img src="../static/images/icons/phone-call.png" alt="Phone Icon">
+                <img src="{{ url_for('static', filename='images/icons/phone-call.png') }}" alt="Phone Icon">
                 Call
             </a>
         </div>
@@ -81,7 +82,7 @@
     </div>
 </footer>
 
-<script src="../static/js/main.js"></script>
+<script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% block extra_js %}{% endblock %}
 </body>
 

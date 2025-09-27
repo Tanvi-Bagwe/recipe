@@ -23,20 +23,20 @@
         <h2>Featured Recipes</h2>
         <div class="featured-grid">
             <div class="featured-card">
-                <a href='/recipe/1' class="recipe-card">
+                <a href="{{ url_for('recipe_detail', recipe_id=1) }}"  class="recipe-card">
                     <img src="{{ url_for('static', filename='images/recipes/butter_chicken.png') }}"
                          alt="Butter Chicken">
                     <h3>Butter Chicken</h3>
                 </a>
             </div>
             <div class="featured-card">
-                <a href='/recipe/9' class="recipe-card">
+                <a href="{{ url_for('recipe_detail', recipe_id=9) }}" class="recipe-card">
                 <img src="{{ url_for('static', filename='images/recipes/dhokla.png') }}" alt="Dhokla">
                 <h3>Dhokla</h3>
                 </a>
             </div>
             <div class="featured-card">
-                <a href='/recipe/12' class="recipe-card">
+                <a href="{{ url_for('recipe_detail', recipe_id=12) }}" class="recipe-card">
                 <img src="{{ url_for('static', filename='images/recipes/pav_bhaji.png') }}" alt="Pav Bhaji">
                 <h3>Pav Bhaji</h3>
                 </a>

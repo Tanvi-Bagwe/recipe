@@ -1,3 +1,4 @@
+// function to submit a testimonial
 function submitTestimonial() {
 
     let errorMessageContainer = document.getElementById('errorMessage');
@@ -41,6 +42,7 @@ function submitTestimonial() {
     }
 }
 
+// function to retrieve all the testimonial
 function loadTestimonials() {
     fetch("/testimonial/all/")
         .then(response => {
@@ -63,4 +65,5 @@ function loadTestimonials() {
         });
 }
 
+// calling load testimonial on app startup
 loadTestimonials();
