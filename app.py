@@ -4,6 +4,8 @@ import os
 from flasgger import Swagger
 from flask import Flask, render_template, jsonify, redirect, url_for
 
+from scheduler import start_scheduler
+
 app = Flask(__name__)
 swagger = Swagger(app, template_file='swagger.yml')
 
@@ -174,7 +176,11 @@ def add_testimonial():
     return jsonify({"message": "Testimonial added successfully", "testimonial": testimonial}), 201
 
 
+# Start the scheduler in a background thread
+start_scheduler()
+
 if __name__ == "__main__":
+    # start_scheduler()
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
     app.run(debug=True)

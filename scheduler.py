@@ -4,6 +4,7 @@
 Contains a scheduled `job` that pings one or more URLs and a `run_scheduler`
 loop that drives the schedule.
 """
+import threading
 import time
 from datetime import datetime
 import requests
@@ -31,7 +32,7 @@ def job():
         logger.error(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Ping failed: {e}")
 
 
-schedule.every(5).minutes.do(job)
+schedule.every(5).seconds.do(job)
 
 
 def run_scheduler():
@@ -45,6 +46,8 @@ def run_scheduler():
         time.sleep(1)
 
 
-if __name__ == "__main__":
-    logger.info("Starting scheduler...")
-    run_scheduler()
+def start_scheduler():
+    """Start scheduler in a background thread"""
+    t = threading.Thread(target=run_scheduler)
+    t.daemon = True
+    t.start()
