@@ -2,9 +2,7 @@ import json
 import os
 
 from flasgger import Swagger
-from flask import Flask, render_template, request, jsonify, redirect, url_for
-
-from logger import logger
+from flask import Flask, render_template, jsonify, redirect, url_for
 
 app = Flask(__name__)
 swagger = Swagger(app, template_file='swagger.yml')
@@ -13,12 +11,22 @@ DATA_FILE = "data/testimonials.json"
 
 
 def load_recipes():
-    """Read recipes from JSON file"""
+    """Load recipe data from the JSON file.
+
+        Returns:
+            list: A list of recipe dictionaries loaded from `data/recipes.json`.
+        """
     with open('data/recipes.json', 'r') as f:
         return json.load(f)
 
 
 def load_testimonials():
+    """Load testimonials from persistent storage.
+
+        Returns:
+            list: The list of testimonials read from `DATA_FILE`.
+                  Returns an empty list if the file does not exist.
+        """
     if not os.path.exists(DATA_FILE):
         return []
     with open(DATA_FILE, "r") as f:
@@ -26,22 +34,33 @@ def load_testimonials():
 
 
 def save_testimonials(testimonials):
+    """Save the testimonials list to persistent storage.
+
+        Args:
+            testimonials (list): The list of testimonial dictionaries to write.
+        """
     with open(DATA_FILE, "w") as f:
         json.dump(testimonials, f, indent=4)
 
 
 @app.route("/")
 def default_route():
+    """Redirect root path to the home page.
+
+        Keeps a single canonical entrypoint for the site.
+        """
     return redirect(url_for('home'))
 
 
 @app.route("/home")
 def home():
+    """Render the home page template."""
     return render_template("home.html")
 
 
 @app.route("/about-us")
 def about():
+    """Render the about page template."""
     return render_template("about.html")
 
 
@@ -50,6 +69,14 @@ from flask import request
 
 @app.route("/recipes")
 def recipes_page():
+    """Render a listing of recipes, optionally filtered by type.
+
+        Query parameters:
+            type (str): 'veg', 'non-veg', or omitted for all recipes.
+
+        Returns:
+            Rendered template `recipies.html` with filtered recipes.
+        """
     recipe_type = request.args.get("type", "all")
     all_recipes = load_recipes()
     filtered_recipes = []
@@ -70,17 +97,34 @@ def recipes_page():
 
 @app.route("/testimonials")
 def testimonials_page():
+    """Render the testimonials submission/view page."""
     return render_template("testimonials.html")
 
 
 @app.route("/testimonial/all/", methods=["GET"])
 def get_all_testimonials():
+    """Return all testimonials as JSON.
+
+        Used by client-side code to fetch existing testimonials.
+
+        Returns:
+            flask.Response: JSON array of testimonials with 200 status.
+        """
     testimonials = load_testimonials()
     return jsonify(testimonials), 200
 
 
 @app.route("/recipe/<int:recipe_id>")
 def recipe_detail(recipe_id):
+    """Render a recipe detail page for the given recipe_id.
+
+        Args:
+            recipe_id (int): The numeric ID of the requested recipe.
+
+        Returns:
+            Rendered template `recipe_detail.html` if found, otherwise
+            `not_found.html`.
+        """
     recipes = load_recipes()
     recipe = None
 
@@ -97,6 +141,18 @@ def recipe_detail(recipe_id):
 
 @app.route("/testimonial/add/", methods=["POST"])
 def add_testimonial():
+    """Add a new testimonial from JSON request body.
+
+        Expected JSON body:
+            {
+                "name": "<user name>",
+                "feedback": "<user feedback>"
+            }
+
+        Returns:
+            JSON response with success message and created testimonial (201),
+            or an error message (400) if required fields are missing.
+        """
     data = request.get_json()
     name = data.get("name")
     feedback = data.get("feedback")

@@ -1,3 +1,9 @@
+# python
+"""`scheduler.py` - periodic self-ping to keep the service awake.
+
+Contains a scheduled `job` that pings one or more URLs and a `run_scheduler`
+loop that drives the schedule.
+"""
 import time
 from datetime import datetime
 import requests
@@ -6,6 +12,13 @@ from logger import logger
 
 
 def job():
+    """Ping configured endpoints to keep the service awake.
+
+        - Logs the start and end of the operation with a timestamp.
+        - Tries each URL in `PING_URLS` until a 200 response is received.
+        - Uses a timeout to ensure the call doesn't block indefinitely.
+        - Catches and logs exceptions (network errors, timeouts, etc.).
+        """
     try:
         logger.info(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Pinging self to stay awake...")
 
@@ -22,6 +35,11 @@ schedule.every(5).minutes.do(job)
 
 
 def run_scheduler():
+    """Run the scheduler loop.
+
+       Continuously executes due jobs by calling `schedule.run_pending()` and
+       sleeps briefly to avoid busy-waiting.
+       """
     while True:
         schedule.run_pending()
         time.sleep(1)
