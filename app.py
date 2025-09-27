@@ -46,11 +46,27 @@ def about():
     return render_template("about.html")
 
 
+from flask import request
+
 @app.route("/recipes")
 def recipes_page():
-    logger.info("Server started")
-    recipes = load_recipes()
-    return render_template("recipies.html", recipes=recipes)
+    recipe_type = request.args.get("type", "all")  # veg, non-veg, all
+    all_recipes = load_recipes()
+    filtered_recipes = []
+
+    if recipe_type == "veg":
+        for r in all_recipes:
+            if r.get("is_veg"):
+                filtered_recipes.append(r)
+    elif recipe_type == "non-veg":
+        for r in all_recipes:
+            if not r.get("is_veg"):
+                filtered_recipes.append(r)
+    else:
+        filtered_recipes = all_recipes  # default: all
+
+    return render_template("recipies.html", recipes=filtered_recipes, selected=recipe_type)
+
 
 
 @app.route("/testimonials")

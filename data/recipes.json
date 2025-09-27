@@ -3,6 +3,7 @@
     "id": 1,
     "name": "Butter Chicken",
     "short": "Creamy tomato-based chicken curry",
+    "is_veg": false,
     "ingredients": [
       "500g boneless chicken",
       "1 cup yogurt",
@@ -32,6 +33,7 @@
     "id": 2,
     "name": "Chole (Chickpea Curry)",
     "short": "Spicy chickpeas in onion-tomato gravy",
+    "is_veg": true,
     "ingredients": [
       "2 cups chickpeas (soaked overnight)",
       "1 onion (chopped)",
@@ -60,6 +62,7 @@
     "id": 3,
     "name": "Vegetable Samosa",
     "short": "Crispy pastry filled with spiced potatoes",
+    "is_veg": true,
     "ingredients": [
       "2 cups all-purpose flour",
       "2 tbsp oil",
@@ -88,6 +91,7 @@
     "id": 4,
     "name": "Vegetable Biryani",
     "short": "Fragrant rice layered with spiced vegetables",
+    "is_veg": true,
     "ingredients": [
       "1 cup basmati rice",
       "1 cup mixed vegetables (carrot, beans, peas)",
@@ -117,6 +121,7 @@
     "id": 5,
     "name": "Kheer (Rice Pudding)",
     "short": "Sweet and creamy Indian rice dessert",
+    "is_veg": true,
     "ingredients": [
       "1/2 cup basmati rice",
       "1 liter full-fat milk",
@@ -141,6 +146,7 @@
     "id": 6,
     "name": "Paneer Tikka",
     "short": "Grilled cottage cheese cubes marinated in spices",
+    "is_veg": true,
     "ingredients": [
       "250g paneer (cubed)",
       "1/2 cup yogurt",
@@ -167,6 +173,7 @@
     "id": 7,
     "name": "Rava Idli",
     "short": "Steamed semolina cakes with spices",
+    "is_veg": true,
     "ingredients": [
       "1 cup semolina (rava)",
       "1/2 cup yogurt",
@@ -194,6 +201,7 @@
     "id": 8,
     "name": "Baingan Bharta",
     "short": "Smoky mashed eggplant curry",
+    "is_veg": true,
     "ingredients": [
       "2 large eggplants",
       "1 onion (chopped)",
@@ -221,6 +229,7 @@
     "id": 9,
     "name": "Dhokla",
     "short": "Steamed savory gram flour cake",
+    "is_veg": true,
     "ingredients": [
       "1 cup gram flour (besan)",
       "1/2 cup yogurt",
@@ -249,6 +258,7 @@
     "id": 10,
     "name": "Fish Curry",
     "short": "Tangy and spicy coastal-style fish curry",
+    "is_veg": false,
     "ingredients": [
       "500g fish fillets",
       "2 tbsp tamarind pulp",
@@ -277,6 +287,7 @@
     "id": 11,
     "name": "Rasam",
     "short": "Spicy South Indian soup with tamarind and tomatoes",
+    "is_veg": true,
     "ingredients": [
       "1 lemon-sized tamarind ball",
       "2 tomatoes (chopped)",
@@ -304,6 +315,7 @@
     "id": 12,
     "name": "Pav Bhaji",
     "short": "Spicy mashed vegetable curry served with buttered buns",
+    "is_veg": true,
     "ingredients": [
       "2 potatoes (boiled)",
       "1 cup mixed vegetables (carrot, peas, cauliflower)",
@@ -332,6 +344,7 @@
     "id": 13,
     "name": "Methi Thepla",
     "short": "Spiced flatbread with fenugreek leaves",
+    "is_veg": true,
     "ingredients": [
       "1 cup whole wheat flour",
       "1/2 cup chopped fresh methi (fenugreek) leaves",
@@ -357,6 +370,7 @@
     "id": 14,
     "name": "Chicken 65",
     "short": "Spicy deep-fried chicken bites",
+    "is_veg": false,
     "ingredients": [
       "500g boneless chicken",
       "1 tbsp ginger-garlic paste",

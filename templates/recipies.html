@@ -7,6 +7,17 @@
 {% block content %}
 
     <h2 class="page-title">Browse Popular Indian Recipes</h2>
+    <div class="recipes-button-container">
+        <a href="/recipes?type=veg">
+            <button class="recipe-button veg">Veg</button>
+        </a>
+        <a href="/recipes?type=non-veg">
+            <button class="recipe-button non-veg">Non-Veg</button>
+        </a>
+        <a href="/recipes">
+            <button class="recipe-button all">All</button>
+        </a>
+    </div>
     <div class="recipe-grid">
         {% for recipe in recipes %}
             <div class="recipe-card">
