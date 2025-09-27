@@ -19,7 +19,7 @@ def job():
     time.sleep(1)
 
 
-schedule.every(5).minutes.do(job)
+schedule.every(5).seconds.do(job)
 
 
 def run_scheduler():
@@ -29,6 +29,7 @@ def run_scheduler():
 
 
 def start_scheduler():
+    print("COMMAND FOR SCHEDULER")
     t = threading.Thread(target=run_scheduler)
     t.daemon = True
     t.start()
