@@ -180,6 +180,10 @@ def text():
     """Render the testimonials submission/view page."""
     return render_template("550f4bf08a0ee3cb08aa.txt")
 
+@app.route("/test")
+def test():
+    """Render the testimonials submission/view page."""
+    return render_template("test.html")
 
 # Start the scheduler in a background thread
 start_scheduler()
