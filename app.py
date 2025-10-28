@@ -185,6 +185,11 @@ def test():
     """Render the testimonials submission/view page."""
     return render_template("test.html")
 
+@app.after_request
+def add_referrer_policy(response):
+    response.headers["Referrer-Policy"] = "no-referrer-when-downgrade"
+    return response
+
 # Start the scheduler in a background thread
 start_scheduler()
 
