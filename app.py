@@ -175,6 +175,11 @@ def add_testimonial():
 
     return jsonify({"message": "Testimonial added successfully", "testimonial": testimonial}), 201
 
+@app.route("/550f4bf08a0ee3cb08aa.txt")
+def text():
+    """Render the testimonials submission/view page."""
+    return render_template("550f4bf08a0ee3cb08aa.txt")
+
 
 # Start the scheduler in a background thread
 start_scheduler()
